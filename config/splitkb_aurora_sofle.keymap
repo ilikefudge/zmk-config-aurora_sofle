@@ -27,6 +27,65 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        slashtap: slashtap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SLASHTAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
+        };
+
+        parentap: parentap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PARENTAP";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        bracktap: bracktap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACKTAP";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+
+        bracetap: bracetap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BRACETAP";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
+
+        apostap: apostap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "APOSTAP";
+            #binding-cells = <0>;
+            bindings = <&kp APOS>, <&kp LS(APOS)>;
+        };
+
+        backtap: backtap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BACKTAP";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
+        };
+
+        comptap: comptap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COMPTAP";
+            #binding-cells = <0>;
+            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
+        };
+
+        printscreen: printscreen {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PRINTSCREEN";
+            #binding-cells = <0>;
+            bindings = <&kp LA(PSCRN)>, <&kp LG(PSCRN)>;
+
+            tapping-term-ms = <400>;
+        };
     };
 
     keymap {
