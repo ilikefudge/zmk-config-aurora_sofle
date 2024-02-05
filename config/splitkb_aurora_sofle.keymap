@@ -122,7 +122,7 @@
 &kp F1        &kp F2                      &kp F3                &kp F4                 &kp F5                  &kp F6                                     &kp F7     &kp F8                  &kp F9                 &kp F10               &kp F11                     &kp F12
 &printscreen  &kp Q                       &kp W                 &kp F                  &kp P                   &kp B                                      &kp J      &kp L                   &kp U                  &kp Y                 &kp SEMI                    &kp BSLH
 &kp LCTRL     &homerow_mods_super LGUI A  &homerow_mods LALT R  &homerow_mods LCTRL S  &homerow_mods LSHIFT T  &kp G                                      &kp M      &homerow_mods RSHIFT N  &homerow_mods RCTRL E  &homerow_mods RALT I  &homerow_mods_super RGUI O  &kp LSHFT
-&kp DEL       &kp Z                       &kp X                 &kp C                  &kp D                   &kp COMMA        &lt 2 ENTER    &kp TAB    &kp DOT    &kp H                   &kp K                  &kp V                 &kp FSLH                    &tog 3
+&kp DEL       &kp Z                       &kp X                 &kp C                  &kp D                   &kp COMMA        &lt 2 ENTER    &kp TAB    &kp DOT    &kp H                   &kp K                  &kp V                 &kp FSLH                    &tog 1
                                           &kp LCTRL             &kp LALT               &lt 4 MINUS             &lt 6 BACKSPACE  &lt 2 ENTER    &lt 7 TAB  &kp SPACE  &lt 3 PERIOD            &kp ESC                &kp LGUI
             >;
 
@@ -138,11 +138,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp N1        &kp N2                      &kp N3                &kp NUMBER_4           &kp N5                  &kp N6                                   &kp N7     &kp N8                  &kp N9                 &kp N0                &kp F11                     &kp F12
-&printscreen  &kp Q                       &kp W                 &kp F                  &kp P                   &kp B                                    &kp J      &kp L                   &kp U                  &kp Y                 &kp SEMI                    &kp BSLH
-&kp LCTRL     &homerow_mods_super LGUI A  &homerow_mods LALT R  &homerow_mods LCTRL S  &homerow_mods LSHIFT T  &kp G                                    &kp M      &homerow_mods RSHIFT N  &homerow_mods RCTRL E  &homerow_mods RALT I  &homerow_mods_super RGUI O  &kp LSHFT
-&kp DEL       &kp Z                       &kp X                 &kp C                  &kp D                   &kp COMMA        &lt 2 ENTER    &kp TAB  &kp DOT    &kp H                   &kp K                  &kp V                 &kp FSLH                    &tog 3
-                                          &kp LCTRL             &kp LALT               &lt 4 MINUS             &lt 6 BACKSPACE  &lt 2 ENTER    &kp TAB  &kp SPACE  &lt 3 PERIOD            &kp ESC                &kp LGUI
+&kp N1        &kp N2                      &kp N3                &kp NUMBER_4           &kp N5                  &kp N6                                     &kp N7     &kp N8                  &kp N9                 &kp N0                &kp F11                     &kp F12
+&printscreen  &kp Q                       &kp W                 &kp F                  &kp P                   &kp B                                      &kp J      &kp L                   &kp U                  &kp Y                 &kp SEMI                    &kp BSLH
+&kp LCTRL     &homerow_mods_super LGUI A  &homerow_mods LALT R  &homerow_mods LCTRL S  &homerow_mods LSHIFT T  &kp G                                      &kp M      &homerow_mods RSHIFT N  &homerow_mods RCTRL E  &homerow_mods RALT I  &homerow_mods_super RGUI O  &kp LSHFT
+&kp DEL       &kp Z                       &kp X                 &kp C                  &kp D                   &kp COMMA        &lt 2 ENTER    &kp TAB    &kp DOT    &kp H                   &kp K                  &kp V                 &kp FSLH                    &tog 0
+                                          &kp LCTRL             &kp LALT               &lt 4 MINUS             &lt 6 BACKSPACE  &lt 2 ENTER    &lt 7 TAB  &kp SPACE  &lt 3 PERIOD            &kp ESC                &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
