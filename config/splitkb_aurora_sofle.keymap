@@ -18,15 +18,6 @@
 
 / {
     behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-        };
-
         slashtap: slashtap {
             compatible = "zmk,behavior-tap-dance";
             label = "SLASHTAP";
@@ -95,6 +86,25 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
+
+        homerow_mods_super: homerow_mods_super {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_SUPER";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1000>;
+            flavor = "tap-preferred";
+        };
+
+        back_morph: back_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACK_MORPH";
+            bindings = <&kp BACKSPACE>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -109,17 +119,17 @@
             //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
 
             bindings = <
-&kp F1        &kp F2                &kp F3                &kp F4                 &kp F5                  &kp F6                             &kp F7     &kp F8                  &kp F9                 &kp F10               &kp F11               &kp F12
-&printscreen  &kp Q                 &kp W                 &kp F                  &kp P                   &kp B                              &kp J      &kp L                   &kp U                  &kp Y                 &kp SEMI              &kp BSLH
-&kp LCTRL     &homerow_mods LGUI A  &homerow_mods LALT R  &homerow_mods LCTRL S  &homerow_mods LSHIFT T  &kp G                              &kp M      &homerow_mods RSHIFT N  &homerow_mods RCTRL E  &homerow_mods RALT I  &homerow_mods RGUI O  &kp LSHFT
-&kp DEL       &kp Z                 &kp X                 &kp C                  &kp D                   &kp COMMA  &lt 2 ENTER    &kp TAB  &kp DOT    &kp H                   &kp K                  &kp V                 &kp FSLH              &tog 3
-                                    &kp LCTRL             &kp LALT               &lt 4 MINUS             &backtap   &lt 2 ENTER    &kp TAB  &kp SPACE  &lt 3 PERIOD            &kp ESC                &kp LGUI
+&kp F1        &kp F2                      &kp F3                &kp F4                 &kp F5                  &kp F6                                 &kp F7     &kp F8                  &kp F9                 &kp F10               &kp F11                     &kp F12
+&printscreen  &kp Q                       &kp W                 &kp F                  &kp P                   &kp B                                  &kp J      &kp L                   &kp U                  &kp Y                 &kp SEMI                    &kp BSLH
+&kp LCTRL     &homerow_mods_super LGUI A  &homerow_mods LALT R  &homerow_mods LCTRL S  &homerow_mods LSHIFT T  &kp G                                  &kp M      &homerow_mods RSHIFT N  &homerow_mods RCTRL E  &homerow_mods RALT I  &homerow_mods_super RGUI O  &kp LSHFT
+&kp DEL       &kp Z                       &kp X                 &kp C                  &kp D                   &kp COMMA      &lt 2 ENTER    &kp TAB  &kp DOT    &kp H                   &kp K                  &kp V                 &kp FSLH                    &tog 3
+                                          &kp LCTRL             &kp LALT               &lt 4 MINUS             &kp BACKSPACE  &lt 2 ENTER    &kp TAB  &kp SPACE  &lt 3 PERIOD            &kp ESC                &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        lower_layer {
+        alt_default {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
